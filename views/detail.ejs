@@ -1,0 +1,161 @@
+<%- include('layout/header') %>
+
+    <main>
+      <div class="detail_container">
+        <div class="book-image">
+          <img src="/images/<%= product.image %>" alt="Book Cover" />
+        </div>
+        <div class="book-details">
+          <p class="breadcrumb">
+            <a href="/">Trang chủ</a> / <a href="/product">Sản phẩm</a> / <%=
+            product.title %>
+          </p>
+          <h2 class="detail_title"><%= product.title %></h2>
+          <p class="detail_price"><%= product.price %> VND</p>
+          <p class="detail_description"><%= product.description %></p>
+
+          <div class="quantity">
+            <input type="number" value="1" min="1" />
+            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+          </div>
+          <p class="meta"><span>Tác giả:</span> <%= product.author %> <br /></p>
+        </div>
+      </div>
+    </main>
+
+    <div class="review-section">
+      <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'description')">
+          Mô Tả Chung
+        </button>
+        <button class="tab-link" onclick="openTab(event, 'reviews')">
+          Đánh giá
+        </button>
+      </div>
+
+      <div id="description" class="tab-content active">
+        <p><%= product.description %><br /></p>
+      </div>
+
+      <div id="reviews" class="tab-content">
+        <h3>"<%= product.title %>"</h3>
+        <form action="/product/<%= product.id %>/reviews" method="post" class="review-form">
+          <label style="margin-top: 20px; font-size: large; font-weight: bold"
+            >Đánh giá của bạn *</label>
+            <input type="hidden" name="book_title" value="<%= product.id %>">
+          <div class="star-rating">
+            <span class="star" onclick="rate(1)" data-value="1">&#9733;</span>
+            <span class="star" onclick="rate(2)" data-value="2">&#9733;</span>
+            <span class="star" onclick="rate(3)" data-value="3">&#9733;</span>
+            <span class="star" onclick="rate(4)" data-value="4">&#9733;</span>
+            <span class="star" onclick="rate(5)" data-value="5">&#9733;</span>
+          </div>
+          <!-- Input ẩn để gửi rating lên server -->
+          <input type="hidden" name="rating" id="ratingInput" required>
+
+          
+          <label>Họ và tên *</label>
+          <% if (name) { %>
+            <input type="text" name="user_name" value="<%= name %>" required />
+          <% } else { %>
+            <input type="text" name="user_name" value="" required />
+          <% } %>
+
+          <label>Email *</label>
+          <% if (email) { %>
+            <input name="email" type="email" value="<%= email %>" required />
+          <% }else { %>
+            <input name="email" type="email" value="" required />
+          <% } %>
+
+          <label>Nhận xét của bạn *</label>
+          <textarea name="comment" required></textarea>
+          
+          <input type="submit" value="Đánh giá" />
+        </form>
+        <div class="reviews">
+          <% if (typeof rates !== "undefined" && rates.length > 0) { %>
+            <% rates.forEach(rate => { %>
+              <div class="review">
+                <h4><%- rate.user_name %></h4>
+                <p><%- rate.create_at %></p>
+                <p><% for (let i = 0; i < rate.rating; i++) { %>
+                  <span class="star">&#9733;</span>
+                <% } %></p>
+                <p><%- rate.comment %></p>
+              </div>
+            <% }) %>
+            <% } else { %>
+            <p>Không có đánh giá.</p>
+            <% } %>
+        </div>
+      </div>
+    </div>
+
+    <div class="book-section-product">
+      <% if (typeof products !== "undefined" && products.length > 0) { %> <%
+      products.slice(0, 4).forEach(product => { %>
+      <div class="book" data-price="<%= product.price %>">
+        <img
+          src="/images/<%= product.image %>"
+          alt="<%= product.title %>"
+          onerror="this.src='/images/default.jpg';"
+        />
+        <h4><%= product.title %></h4>
+        <button class="buy-button-product">
+          $<%= product.price %> – Mua ngay
+        </button>
+      </div>
+      <% }) %> <% } else { %>
+      <p>Không có sản phẩm liên quan.</p>
+      <% } %>
+    </div>
+
+    <%- include('layout/footer') %>
+
+    <script>
+      function openTab(evt, tabName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab-link");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      
+      document.addEventListener("DOMContentLoaded", function () {
+        const stars = document.querySelectorAll(".star");
+        let selectedRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener("click", function () {
+                selectedRating = parseInt(this.getAttribute("data-value")); 
+                document.getElementById("ratingInput").value = selectedRating;
+                highlightStars(selectedRating);
+            });
+
+            star.addEventListener("mouseover", function () {
+                highlightStars(parseInt(this.getAttribute("data-value")));
+            });
+
+            star.addEventListener("mouseout", function () {
+                highlightStars(selectedRating); 
+            });
+        });
+
+        function highlightStars(rating) {
+            stars.forEach(star => {
+                const value = parseInt(star.getAttribute("data-value"));
+                star.classList.toggle("selected", value <= rating);
+            });
+        }
+    });
+    </script>
+  </body>
+</html>

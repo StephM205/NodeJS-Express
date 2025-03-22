@@ -1,0 +1,41 @@
+<%- include('layout/header') %>
+
+<div class="container-fp">
+  <!-- Hình ảnh -->
+  <div class="image-container-fp"></div>
+
+  <!-- Form đặt lại mật khẩu -->
+  <div class="content-fp">
+    <div class="logo-fp">ĐẶT LẠI MẬT KHẨU</div>
+    <h4>Password Reset</h4>
+    <p>
+      Cung cấp địa chỉ email được liên kết với tài khoản của bạn để khôi phục
+      mật khẩu.
+    </p>
+
+    <form action="reset-password" method="post">
+      <input
+        type="hidden"
+        name="email"
+        placeholder="Email"
+        value="<%= email %>"
+        required
+      />
+      <input type="password" name="password" placeholder="Password" required />
+      <input
+        type="password"
+        name="confirmPassword"
+        placeholder="Confirm Password"
+        required
+      />
+
+      <button type="submit" class="btn-fp">Gửi</button>
+    </form>
+
+    <div class="links-fp">
+      <a href="/login">Đăng nhập</a> | <a href="/login">Đăng Ký</a>
+    </div>
+  </div>
+</div>
+
+<%- include('layout/footer') %>

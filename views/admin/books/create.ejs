@@ -1,0 +1,114 @@
+<%- include("../layouts/header") %>
+
+<body class="g-sidenav-show g-sidenav-pinned">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe
+  ></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <%- include("../layouts/sidebar") %>
+
+  <div class="main-content" id="panel">
+    <%- include("../layouts/topbar") %>
+
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Sản phẩm</h6>
+              <nav
+                aria-label="breadcrumb"
+                class="d-none d-md-inline-block ml-md-4"
+              >
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item">
+                    <a href="#"><i class="fas fa-home"></i></a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Sản phẩm
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+              <a href="/admin/manageProd/createProd" class="btn btn-sm btn-neutral">Thêm mới</a>
+              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+            </div>
+          </div>
+
+     <!-- Page content -->
+  <form action="/admin/manageProd/createProd" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Tên sách</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Title"
+        name="title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Tác giả</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Author"
+        name="author"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Giá</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Price"
+        name="price"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Số lượng nhập kho</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Stock"
+        name="stock"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Hình ảnh</label>
+      <input
+        type="file"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Image"
+        name="image"
+      />
+      </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Mô tả</label>
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+        name="description"
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+  </form>
+
+  </div>
+ 
+</body>

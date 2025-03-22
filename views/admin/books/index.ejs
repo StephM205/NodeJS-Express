@@ -1,0 +1,86 @@
+<%- include("../layouts/header") %>
+
+<body class="g-sidenav-show g-sidenav-pinned">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe
+  ></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <%- include("../layouts/sidebar") %>
+
+  <div class="main-content" id="panel">
+    <%- include("../layouts/topbar") %>
+
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Sản phẩm</h6>
+              <nav
+                aria-label="breadcrumb"
+                class="d-none d-md-inline-block ml-md-4"
+              >
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item">
+                    <a href="#"><i class="fas fa-home"></i></a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Sản phẩm
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+              <a href="/admin/manageProd/createProd" class="btn btn-sm btn-neutral">Thêm mới</a>
+              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+            </div>
+          </div>
+
+     <!-- Page content -->
+  <table style="width: 100%;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  background-color: transparent;" class="align-items-center table-flush">
+    <tr>
+      <th>Mã sách</th>
+      <th>Tên sách</th>
+      <th>Tác giả</th>
+      <th>Hình ảnh</th>
+      <th>Giá</th>
+      <th>Mô tả</th>
+      <th>Số tồn</th>
+      <th>Ngày nhập</th>
+      <th>Phương thức</th>                
+    </tr>
+
+    <% products.forEach(product => { %>
+      <tr>
+        <td><%- product.id %></td>
+        <td><%- product.title %></td>
+        <td><%- product.author %></td>
+        <td><img style="margin: 10px;" src="../../images/<%- product.image %>" alt="" width="100px"></td>
+        <td><%- product.price %></td>
+        <td><%- product.description %></td>
+        <td><%- product.stock %></td>
+        <td><%- product.created_at %></td>
+        <td>
+          <a class="btn btn-sm btn-primary" href="/admin/manageProd/updateProd/<%- product.id %>">Sửa</a>
+          <a class="btn btn-sm btn-danger" href="/admin/manageProd/deleteProd/<%- product.id %>" onclick="return confirm('Bạn chắc chắn muốn xóa sản phẩm này?')">Xóa</a>
+        </td>
+      </tr>
+    <% }) %>
+      
+  </table>
+
+  </div>
+ 
+</body>

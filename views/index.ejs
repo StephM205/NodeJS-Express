@@ -1,0 +1,226 @@
+<%- include('layout/header') %>
+
+<div class="banner">
+  <div class="text">
+    <p class="new">Sách Mới</p>
+    <h1 class="title">Harry Potter và Chiếc Cốc Lửa</h1>
+    <p class="description">
+      Harry Potter và Chiếc cốc lửa là câu chuyện về năm thứ tư của Harry Potter
+      tại Hogwarts. Đây là cuốn sách mà J.K. Rowling yêu thích nhất trong số bảy
+      tập.
+    </p>
+  </div>
+  <div class="image">
+    <img
+      style="width: 450px; height: 600px"
+      src="https://cungdocsach.vn/wp-content/uploads/2019/10/Harry-Potter-v%C3%A0-chi%E1%BA%BFc-c%E1%BB%91c-l%E1%BB%ADa.gif"
+      alt=""
+    />
+  </div>
+</div>
+
+<div class="banners">
+  <div class="bannerss gryffindor">
+    <h2>Gryffindor</h2>
+    <img
+      class="crest"
+      src="images/gryffindor-removebg-preview.png"
+      alt="Gryffindor"
+    />
+  </div>
+  <div class="bannerss ravenclaw">
+    <h2>Ravenclaw</h2>
+    <img
+      class="crest"
+      src="images/Harry-Potter-Ravenclaw-Crest-Official-wall-mounted-cardboard-cutout-buy-now-at-star__86173-removebg-preview.png"
+      alt="Ravenclaw"
+    />
+  </div>
+  <div class="bannerss slytherin">
+    <h2>Slytherin</h2>
+    <img
+      class="crest"
+      style="width: 110px; height: 110px"
+      src="images/99898-middle-removebg-preview.png"
+      alt="Slytherin"
+    />
+  </div>
+  <div class="bannerss hufflepuff">
+    <h2>Hufflepuff</h2>
+    <img
+      class="crest"
+      src="images/Harry-Potter-Hufflepuff-Crest-Official-wall-mounted-cardboard-cutout-buy-now-at-star__21122-removebg-preview.png"
+      alt="Hufflepuff"
+    />
+  </div>
+
+  <div class="sorting-info">
+    <h2>NGÔI NHÀ HOGWARTS CỦA BẠN LÀ GÌ?</h2>
+    <a href="#" class="sorting-button">CHỌN NGÔI NHÀ HOGWARTS</a>
+  </div>
+</div>
+
+<div class="author">
+  <div class="image-section">
+    <img
+      src="https://th.bing.com/th/id/R.9229d2e739a2f1ba97b891cffbe09fc1?rik=ztMkH9mggRJJNA&pid=ImgRaw&r=0"
+      alt="Author"
+    />
+  </div>
+  <div class="content-section">
+    <h2 class="author-title">HARRY POTTER</h2>
+    <p class="author-description">
+      Trích dẫn sách Tổng hợp những trích dẫn hay và giá trị nhất trong Harry
+      Potter Harry Potter là một tiểu thuyết giả tưởng được viết bởi tác giả JK
+      Rowling. Cuốn tiểu thuyết kể về cuộc đời của một phù thủy trẻ là Harry
+      Potter cùng những người bạn. Harry Potter mang đến cho người đọc những
+      giây phút trải nghiệm tuyệt vời trong thế giới phép thuật đầy hấp dẫn.
+    </p>
+    <a href="#" class="read-more">ĐỌC THÊM</a>
+
+    <div class="author-info">
+      <h3>J.K Rowling</h3>
+      <span>Doanh nhân, Nhà văn và Diễn giả..</span>
+
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-series">
+  <div class="text-section">
+    <p class="subheading">Trọn Bộ</p>
+    <h1 class="title-series">Harry Potter</h1>
+    <p class="description-series">
+      Harry Potter là một loạt tiểu thuyết huyền bí gồm bảy phần của nhà văn Anh
+      Quốc J. K. Rowling. Bộ truyện viết về những cuộc phiêu lưu phù thủy của
+      cậu bé Harry Potter cùng hai người bạn thân là Ron Weasley và Hermione
+      Granger, lấy bối cảnh tại Trường Phù thủy và Pháp sư Hogwarts ở nước Anh.
+      Những cuộc phiêu lưu tập trung vào cuộc chiến của Harry Potter trong việc
+      chống lại tên Chúa tể Hắc ám Voldemort – người có tham vọng muốn trở nên
+      bất tử, thống trị thế giới phù thủy, nô dịch hóa những người phi pháp
+      thuật và tiêu diệt những ai cản đường hắn, đặc biệt là Harry Potter. Cả bộ
+      truyện 7 quyển, với quyển thứ 7 được chia thành 2 phần, dựng thành 8 bộ
+      phim trong loạt phim cùng tên phát hành bởi Warner Bros. Pictures, trở
+      thành loạt phim có doanh thu cao nhất mọi thời đại, kéo theo thương hiệu
+      Harry Potter có giá trị hơn 25 tỷ USD.
+    </p>
+    <a href="/product/15"><button class="buy-button">MUA TRỌN BỘ</button></a>
+  </div>
+
+  <div class="book-section">
+    <div class="book-grid">
+      <% products.slice(0, 8).forEach(product => { %>
+      <a href="/product/<%= product.id %>"
+        ><img src="images/<%= product.image %>" alt="Book 1"
+      /></a>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 50px" class="slideshow-container">
+  <div class="slideshow activeshow">
+    <% rates.slice(0, 3).forEach(rate => {%>
+    <a
+      style="text-decoration: none; color: black"
+      href="/product/<%= products.find(product => product.title === rate.book_title).id %>"
+    >
+      <div class="reviewshow">
+        <h4><%= rate.book_title %></h4>
+        <div class="starshow">
+          <% for (let i = 0; i < rate.rating; i++) { %><span
+            style="color: yellow"
+            class="star"
+            >&#9733;</span
+          ><% } %>
+        </div>
+        <p><%= rate.comment %></p>
+        <p><strong><%= rate.user_name %></strong> - <%= rate.create_at %></p>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+
+  <div class="slideshow">
+    <% rates.slice(3, 6).forEach(rate => {; %>
+    <a
+      style="text-decoration: none; color: black"
+      href="/product/<%= products.find(product => product.title === rate.book_title).id %>"
+    >
+      <div class="reviewshow">
+        <h4><%= rate.book_title %></h4>
+        <div class="starshow">
+          <% for (let i = 0; i < rate.rating; i++) { %><span
+            style="color: yellow"
+            class="star"
+            >&#9733;</span
+          ><% } %>
+        </div>
+        <p><%= rate.comment %></p>
+        <p><strong><%= rate.user_name %></strong> - <%= rate.create_at %></p>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+
+  <div class="slideshow">
+    <% rates.slice(6, 9).forEach(rate => {; %>
+    <a
+      style="text-decoration: none; color: black"
+      href="/product/<%= products.find(product => product.title === rate.book_title).id %>"
+    >
+      <div class="reviewshow">
+        <h4><%= rate.book_title %></h4>
+        <div class="starshow">
+          <% for (let i = 0; i < rate.rating; i++) { %><span
+            style="color: yellow"
+            class="star"
+            >&#9733;</span
+          ><% } %>
+        </div>
+        <p><%= rate.comment %></p>
+        <p><strong><%= rate.user_name %></strong> - <%= rate.create_at %></p>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+</div>
+
+<div class="container-product">
+  <h3 class="subheading">Sản phẩm bán chạy</h3>
+  <h1 class="title-product">Mua Ngay Kẻo Hết</h1>
+
+  <div class="book-section-product">
+    <% products.slice(0, 4).forEach(product => { %>
+    <div class="book" data-price="<%= product.price %>">
+      <a style="text-decoration: none" href="/product/<%= product.id %>">
+        <img src="images/<%= product.image %>" alt="<%= product.title %>" />
+        <h4><%= product.title %></h4>
+      </a>
+      <button class="buy-button-product">
+        <%= product.price %>VND – Mua ngay
+      </button>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".slideshow");
+
+  function showNextSlide() {
+    slides[currentIndex].classList.remove("activeshow");
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add("activeshow");
+  }
+
+  setInterval(showNextSlide, 5000);
+</script>
+
+<%- include('layout/footer') %>

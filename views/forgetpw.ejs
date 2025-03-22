@@ -1,0 +1,35 @@
+<%- include('layout/header') %>
+
+<div class="container-fp">
+  <!-- Hình ảnh -->
+  <div class="image-container-fp"></div>
+
+  <!-- Form đặt lại mật khẩu -->
+  <div class="content-fp">
+    <div class="logo-fp">ĐẶT LẠI MẬT KHẨU</div>
+    <h4>Password Reset</h4>
+    <p>
+      Cung cấp địa chỉ email được liên kết với tài khoản của bạn để khôi phục
+      mật khẩu.
+    </p>
+
+    <form action="forget-password" method="post">
+      <% if (errors != null && errors.email != null) { %>
+      <input type="email" name="email" placeholder="Email" required />
+      <b style="position: relative; top: -8px; left: -80px"
+        ><%= errors.email %></b
+      ><br />
+      <% }else{ %>
+      <input type="email" name="email" placeholder="Email" required />
+      <% } %>
+
+      <button type="submit" class="btn-fp">Gửi</button>
+    </form>
+
+    <div class="links-fp">
+      <a href="/login">Đăng nhập</a> | <a href="/login">Đăng Ký</a>
+    </div>
+  </div>
+</div>
+
+<%- include('layout/footer') %>

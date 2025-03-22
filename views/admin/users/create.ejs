@@ -1,0 +1,122 @@
+<%- include("../layouts/header") %>
+
+<body class="g-sidenav-show g-sidenav-pinned">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe
+  ></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <%- include("../layouts/sidebar") %>
+
+  <div class="main-content" id="panel">
+    <%- include("../layouts/topbar") %>
+
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Sản phẩm</h6>
+              <nav
+                aria-label="breadcrumb"
+                class="d-none d-md-inline-block ml-md-4"
+              >
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item">
+                    <a href="#"><i class="fas fa-home"></i></a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Sản phẩm
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+              <a href="/admin/manageProd/createProd" class="btn btn-sm btn-neutral">Thêm mới</a>
+              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+            </div>
+          </div>
+
+     <!-- Page content -->
+  <form action="/admin/manageUser/createUser" method="post">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Tên tài khoản</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Tên tài khoản"
+        name="name"
+      />
+
+      
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Email"
+        name="email"
+      />
+  
+
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Mật khẩu</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Mật khẩu"
+        name="password"
+      />
+      
+
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Số điện thoại</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Số điện thoại"
+        name="phone"
+      />
+      
+
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Địa chỉ</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Địa chỉ"
+        name="address"
+      />
+      
+      
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Vai trò</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="role">
+          <option value="1">Admin</option>
+          <option value="2">Customer</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm tài khoản</button>
+  </form>
+
+  </div>
+ 
+</body>

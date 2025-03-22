@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="form.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          style="width: 120px; margin-left: 80px"
+          src="https://logos-world.net/wp-content/uploads/2020/04/Harry-Potter-Logo.png"
+          alt=""
+        />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/">Trang chủ</a></li>
+          <li><a href="/product">Sản phẩm</a></li>
+          <li><a href="#">Tin tức</a></li>
+          <li><a href="/contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="icon">
+        <% if(name == null){ %>
+        <a href="/login" class="user-link">
+          <i class="fas fa-user-alt"></i>
+        </a>
+        <% } else { %>
+        <div class="user-menu">
+          <ul class="dropdown">
+            <% if(role == "admin"){ %>
+            <li><a href="/admin">Trang quản trị</a></li>
+            <% } %>
+            <li><a href="/logout">Đăng xuất</a></li>
+          </ul>
+          <i class="fas fa-user-alt user-icon"></i>
+        </div>
+        <% } %>
+
+        <i class="fas fa-cart-arrow-down cart-icon"></i>
+      </div>
+    </header>
+  </body>
+</html>

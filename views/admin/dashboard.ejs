@@ -1,0 +1,799 @@
+<%- include("layouts/header") %>
+
+  <body class="g-sidenav-show g-sidenav-pinned">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <%- include("layouts/sidebar") %>
+
+    <div class="main-content" id="panel">
+      <%- include("layouts/topbar") %>
+
+      <!-- Header -->
+      <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+          <div class="header-body">
+            <div class="row align-items-center py-4">
+              <div class="col-lg-6 col-7">
+                <h6 class="h2 text-white d-inline-block mb-0">Default</h6>
+                <nav
+                  aria-label="breadcrumb"
+                  class="d-none d-md-inline-block ml-md-4"
+                >
+                  <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                    <li class="breadcrumb-item">
+                      <a href="#"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Default
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="col-lg-6 col-5 text-right">
+                <a href="#" class="btn btn-sm btn-neutral">New</a>
+                <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+              </div>
+            </div>
+            <!-- Card stats -->
+            <div class="row">
+              <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">
+                          Total traffic
+                        </h5>
+                        <span class="h2 font-weight-bold mb-0">350,897</span>
+                      </div>
+                      <div class="col-auto">
+                        <div
+                          class="icon icon-shape bg-gradient-red text-white rounded-circle shadow"
+                        >
+                          <i class="ni ni-active-40"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3 mb-0 text-sm">
+                      <span class="text-success mr-2"
+                        ><i class="fa fa-arrow-up"></i> 3.48%</span
+                      >
+                      <span class="text-nowrap">Since last month</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">
+                          New users
+                        </h5>
+                        <span class="h2 font-weight-bold mb-0">2,356</span>
+                      </div>
+                      <div class="col-auto">
+                        <div
+                          class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow"
+                        >
+                          <i class="ni ni-chart-pie-35"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3 mb-0 text-sm">
+                      <span class="text-success mr-2"
+                        ><i class="fa fa-arrow-up"></i> 3.48%</span
+                      >
+                      <span class="text-nowrap">Since last month</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">
+                          Sales
+                        </h5>
+                        <span class="h2 font-weight-bold mb-0">924</span>
+                      </div>
+                      <div class="col-auto">
+                        <div
+                          class="icon icon-shape bg-gradient-green text-white rounded-circle shadow"
+                        >
+                          <i class="ni ni-money-coins"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3 mb-0 text-sm">
+                      <span class="text-success mr-2"
+                        ><i class="fa fa-arrow-up"></i> 3.48%</span
+                      >
+                      <span class="text-nowrap">Since last month</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h5 class="card-title text-uppercase text-muted mb-0">
+                          Performance
+                        </h5>
+                        <span class="h2 font-weight-bold mb-0">49,65%</span>
+                      </div>
+                      <div class="col-auto">
+                        <div
+                          class="icon icon-shape bg-gradient-info text-white rounded-circle shadow"
+                        >
+                          <i class="ni ni-chart-bar-32"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3 mb-0 text-sm">
+                      <span class="text-success mr-2"
+                        ><i class="fa fa-arrow-up"></i> 3.48%</span
+                      >
+                      <span class="text-nowrap">Since last month</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page content -->
+      <div class="container-fluid mt--6">
+        <div class="row">
+          <div class="col-xl-8">
+            <div class="card bg-default">
+              <div class="card-header bg-transparent">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="text-light text-uppercase ls-1 mb-1">
+                      Overview
+                    </h6>
+                    <h5 class="h3 text-white mb-0">Sales value</h5>
+                  </div>
+                  <div class="col">
+                    <ul class="nav nav-pills justify-content-end">
+                      <li
+                        class="nav-item mr-2 mr-md-0"
+                        data-toggle="chart"
+                        data-target="#chart-sales-dark"
+                        data-update='{"data":{"datasets":[{"data":[0, 20, 10, 30, 15, 40, 20, 60, 60]}]}}'
+                        data-prefix="$"
+                        data-suffix="k"
+                      >
+                        <a
+                          href="#"
+                          class="nav-link py-2 px-3 active"
+                          data-toggle="tab"
+                        >
+                          <span class="d-none d-md-block">Month</span>
+                          <span class="d-md-none">M</span>
+                        </a>
+                      </li>
+                      <li
+                        class="nav-item"
+                        data-toggle="chart"
+                        data-target="#chart-sales-dark"
+                        data-update='{"data":{"datasets":[{"data":[0, 20, 5, 25, 10, 30, 15, 40, 40]}]}}'
+                        data-prefix="$"
+                        data-suffix="k"
+                      >
+                        <a
+                          href="#"
+                          class="nav-link py-2 px-3"
+                          data-toggle="tab"
+                        >
+                          <span class="d-none d-md-block">Week</span>
+                          <span class="d-md-none">W</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <!-- Chart -->
+                <div class="chart">
+                  <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                      <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                      <div class=""></div>
+                    </div>
+                  </div>
+                  <!-- Chart wrapper -->
+                  <canvas
+                    id="chart-sales-dark"
+                    class="chart-canvas chartjs-render-monitor"
+                    width="917"
+                    height="437"
+                    style="display: block; height: 350px; width: 734px"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card">
+              <div class="card-header bg-transparent">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="text-uppercase text-muted ls-1 mb-1">
+                      Performance
+                    </h6>
+                    <h5 class="h3 mb-0">Total orders</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <!-- Chart -->
+                <div class="chart">
+                  <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                      <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                      <div class=""></div>
+                    </div>
+                  </div>
+                  <canvas
+                    id="chart-bars"
+                    class="chart-canvas chartjs-render-monitor"
+                    width="410"
+                    height="437"
+                    style="display: block; height: 350px; width: 328px"
+                  ></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-8">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h3 class="mb-0">Page visits</h3>
+                  </div>
+                  <div class="col text-right">
+                    <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <!-- Projects table -->
+                <table class="table align-items-center table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Page name</th>
+                      <th scope="col">Visitors</th>
+                      <th scope="col">Unique users</th>
+                      <th scope="col">Bounce rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">/argon/</th>
+                      <td>4,569</td>
+                      <td>340</td>
+                      <td>
+                        <i class="fas fa-arrow-up text-success mr-3"></i> 46,53%
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">/argon/index.html</th>
+                      <td>3,985</td>
+                      <td>319</td>
+                      <td>
+                        <i class="fas fa-arrow-down text-warning mr-3"></i>
+                        46,53%
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">/argon/charts.html</th>
+                      <td>3,513</td>
+                      <td>294</td>
+                      <td>
+                        <i class="fas fa-arrow-down text-warning mr-3"></i>
+                        36,49%
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">/argon/tables.html</th>
+                      <td>2,050</td>
+                      <td>147</td>
+                      <td>
+                        <i class="fas fa-arrow-up text-success mr-3"></i> 50,87%
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">/argon/profile.html</th>
+                      <td>1,795</td>
+                      <td>190</td>
+                      <td>
+                        <i class="fas fa-arrow-down text-danger mr-3"></i>
+                        46,53%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h3 class="mb-0">Social traffic</h3>
+                  </div>
+                  <div class="col text-right">
+                    <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <!-- Projects table -->
+                <table class="table align-items-center table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Referral</th>
+                      <th scope="col">Visitors</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Facebook</th>
+                      <td>1,480</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <span class="mr-2">60%</span>
+                          <div>
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-gradient-danger"
+                                role="progressbar"
+                                aria-valuenow="60"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                style="width: 60%"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Facebook</th>
+                      <td>5,480</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <span class="mr-2">70%</span>
+                          <div>
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-gradient-success"
+                                role="progressbar"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                style="width: 70%"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Google</th>
+                      <td>4,807</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <span class="mr-2">80%</span>
+                          <div>
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-gradient-primary"
+                                role="progressbar"
+                                aria-valuenow="80"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                style="width: 80%"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Instagram</th>
+                      <td>3,678</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <span class="mr-2">75%</span>
+                          <div>
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-gradient-info"
+                                role="progressbar"
+                                aria-valuenow="75"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                style="width: 75%"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">twitter</th>
+                      <td>2,645</td>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <span class="mr-2">30%</span>
+                          <div>
+                            <div class="progress">
+                              <div
+                                class="progress-bar bg-gradient-warning"
+                                role="progressbar"
+                                aria-valuenow="30"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                style="width: 30%"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <%- include("layouts/footer") %>
+      </div>
+    </div>
+
+    <script src="../../admin/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../admin/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../admin/vendor/js-cookie/js.cookie.js"></script>
+    <script src="../../admin/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../../admin/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+
+    <!-- Specific JS goes HERE -->
+
+    <script src="../../admin/vendor/chart.js/dist/Chart.min.js"></script>
+
+    <style>
+      #ofBar {
+        background: #fff;
+        z-index: 999999999;
+        font-size: 16px;
+        color: #333;
+        padding: 16px 40px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 40px;
+        width: 80%;
+        border-radius: 8px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+          0 8px 16px -8px rgba(0, 0, 0, 0.3),
+          0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+      }
+
+      #ofBar-logo img {
+        height: 50px;
+      }
+
+      #ofBar-content {
+        display: inline;
+        padding: 0 15px;
+      }
+
+      #ofBar-right {
+        display: flex;
+        align-items: center;
+      }
+
+      #ofBar b {
+        font-size: 15px !important;
+      }
+      #count-down {
+        display: initial;
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      #close-bar {
+        font-size: 17px;
+        opacity: 0.5;
+        cursor: pointer;
+        color: #808080;
+        font-weight: bold;
+      }
+      #close-bar:hover {
+        opacity: 1;
+      }
+      #btn-bar {
+        background-image: linear-gradient(310deg, #141727 0%, #3a416f 100%);
+        color: #fff;
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+        opacity: 0.95;
+        margin-right: 20px;
+        box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.23),
+          0 6px 10px -5px rgba(0, 0, 0, 0.25);
+      }
+      #btn-bar,
+      #btn-bar:hover,
+      #btn-bar:focus,
+      #btn-bar:active {
+        text-decoration: none !important;
+        color: #fff !important;
+      }
+      #btn-bar:hover {
+        opacity: 1;
+      }
+
+      #btn-bar span,
+      #ofBar-content span {
+        color: red;
+        font-weight: 700;
+      }
+
+      #oldPriceBar {
+        text-decoration: line-through;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 400;
+        top: 2px;
+        position: relative;
+      }
+      #newPrice {
+        color: #fff;
+        font-size: 19px;
+        font-weight: 700;
+        top: 2px;
+        position: relative;
+        margin-left: 7px;
+      }
+
+      #fromText {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 400;
+        margin-right: 3px;
+        top: 0px;
+        position: relative;
+      }
+
+      #pls-contact-me-on-email {
+        position: absolute;
+        color: white;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 999;
+        cursor: pointer;
+        padding-top: 100px;
+        padding-left: 50px;
+      }
+
+      @media (max-width: 991px) {
+      }
+      @media (max-width: 768px) {
+        #count-down {
+          display: block;
+          margin-top: 15px;
+        }
+
+        #ofBar {
+          flex-direction: column;
+          align-items: normal;
+        }
+
+        #ofBar-content {
+          margin: 15px 0;
+          text-align: center;
+          font-size: 18px;
+        }
+
+        #ofBar-right {
+          justify-content: flex-end;
+        }
+      }
+    </style>
+
+    <script type="text/javascript" id="" charset="">
+      function setCookie(a, d, c) {
+        var b = new Date();
+        b.setTime(b.getTime() + c * 24 * 60 * 60 * 1e3);
+        c = "expires\x3d" + b.toUTCString();
+        document.cookie = a + "\x3d" + d + ";" + c + ";path\x3d/";
+      }
+      function readDomain() {
+        domain = window.location.hostname;
+        if (domain == "hrm.newflex.co.kr") {
+          console.log("Remove the script");
+          var a = document.createElement("div");
+          a.setAttribute("id", "pls-contact-me-on-email");
+          a.innerHTML =
+            "\x3ch1\x3ePlease Remove the Stolen Google Analytics from \x3ca href\x3d'https://www.creative-tim.com/?ref\x3dstolen-website' target\x3d'_blank' '\x3ecreative-tim.com\x3c/a\x3e Please send an email to beni@creative-tim.com to help you remove our scripts.\x3c/h1\x3e";
+          document.body.insertBefore(a, document.body.firstChild);
+        }
+      }
+      function readCookie(a) {
+        a += "\x3d";
+        for (var d = document.cookie.split(";"), c = 0; c < d.length; c++) {
+          for (var b = d[c]; b.charAt(0) == " "; ) b = b.substring(1, b.length);
+          if (b.indexOf(a) == 0) return b.substring(a.length, b.length);
+        }
+        return null;
+      }
+      function createOfferBar() {
+        readDomain();
+        var a = document.createElement("div");
+        a.setAttribute("id", "ofBar");
+        a.innerHTML =
+          "\x3cdiv id\x3d'ofBar-logo'\x3e \x3cimg alt\x3d'creative-tim-logo' src\x3d'https://s3.amazonaws.com/creativetim_bucket/static-assets/logo-ct-black.png'\x3e\x3c/div\x3e\x3cdiv id\x3d'ofBar-content'\x3e\ud83d\udd25 Start Strong in 2025: \x3cb\x3eUnlock the All-Access Pass \u2013 80% OFF\x3c/b\x3e! \u2764\ufe0f Don\u2019t Miss Out!\x3c/div\x3e\x3cdiv id\x3d'ofBar-right'\x3e\x3ca href\x3d'https://www.creative-tim.com/campaign?ref\x3dct-demos' target\x3d'_blank' id\x3d'btn-bar'\x3eView Offer\x3c/a\x3e\x3ca id\x3d'close-bar'\x3e\u00d7\x3c/a\x3e\x3c/div\x3e";
+        document.body.insertBefore(a, document.body.firstChild);
+      }
+      function closeOfferBar() {
+        document.getElementById("ofBar").setAttribute("style", "display:none");
+        setCookie("view_offer_bar", "true", 1);
+      }
+      var value = readCookie("view_offer_bar");
+      value == null &&
+        (createOfferBar(),
+        document
+          .getElementById("close-bar")
+          .addEventListener("click", closeOfferBar));
+    </script>
+    <script type="text/javascript" id="" charset="">
+      !(function (d, g, e) {
+        d.TiktokAnalyticsObject = e;
+        var a = (d[e] = d[e] || []);
+        a.methods =
+          "page track identify instances debug on off once ready alias group enableCookie disableCookie".split(
+            " "
+          );
+        a.setAndDefer = function (b, c) {
+          b[c] = function () {
+            b.push([c].concat(Array.prototype.slice.call(arguments, 0)));
+          };
+        };
+        for (d = 0; d < a.methods.length; d++) a.setAndDefer(a, a.methods[d]);
+        a.instance = function (b) {
+          b = a._i[b] || [];
+          for (var c = 0; c < a.methods.length; c++)
+            a.setAndDefer(b, a.methods[c]);
+          return b;
+        };
+        a.load = function (b, c) {
+          var f = "https://analytics.tiktok.com/i18n/pixel/events.js";
+          a._i = a._i || {};
+          a._i[b] = [];
+          a._i[b]._u = f;
+          a._t = a._t || {};
+          a._t[b] = +new Date();
+          a._o = a._o || {};
+          a._o[b] = c || {};
+          c = document.createElement("script");
+          c.type = "text/javascript";
+          c.async = !0;
+          c.src = f + "?sdkid\x3d" + b + "\x26lib\x3d" + e;
+          b = document.getElementsByTagName("script")[0];
+          b.parentNode.insertBefore(c, b);
+        };
+        a.load("CC6UAQBC77U7GVKHLC4G");
+        a.page();
+      })(window, document, "ttq");
+    </script>
+    <script src="../../admin/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <script src="../../admin/js/argon.js?v=1.2.0"></script>
+    <div
+      class="backdrop d-xl-none"
+      data-action="sidenav-unpin"
+      data-target="undefined"
+    ></div>
+    <div
+      style="
+        left: -1000px;
+        overflow: scroll;
+        position: absolute;
+        top: -1000px;
+        border: none;
+        box-sizing: content-box;
+        height: 200px;
+        margin: 0px;
+        padding: 0px;
+        width: 200px;
+      "
+    >
+      <div
+        style="
+          border: none;
+          box-sizing: content-box;
+          height: 200px;
+          margin: 0px;
+          padding: 0px;
+          width: 200px;
+        "
+      ></div>
+    </div>
+
+    <script
+      defer=""
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"915bba94ed6887c0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"1b7cbb72744b40c580f8633c6b62637e"}'
+      crossorigin="anonymous"
+    ></script>
+    <iframe
+      allow="join-ad-interest-group"
+      data-tagging-id="G-ZF0KSVVM14"
+      data-load-time="1740193259010"
+      height="0"
+      width="0"
+      src="https://td.doubleclick.net/td/ga/rul?tid=G-ZF0KSVVM14&amp;gacid=594391067.1740027204&amp;gtm=45je52k0v9125454399za200&amp;dma=0&amp;gcd=13l3l3l3l2l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=2&amp;tag_exp=101732282~101732284~102067808~102482433~102539968~102558064~102587591~102605417~102640600~102658453&amp;z=297972372"
+      style="display: none; visibility: hidden"
+    ></iframe
+    ><iframe
+      allow="join-ad-interest-group"
+      data-tagging-id="G-LMRL06STSS"
+      data-load-time="1740193259067"
+      height="0"
+      width="0"
+      src="https://td.doubleclick.net/td/ga/rul?tid=G-LMRL06STSS&amp;gacid=594391067.1740027204&amp;gtm=45je52k0v9126465082za200&amp;dma=0&amp;gcd=13l3l3l3l2l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=2&amp;tag_exp=101732279~101732281~102067808~102482433~102539968~102558064~102587591~102605417~102640600~102658453&amp;z=1150214925"
+      style="display: none; visibility: hidden"
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<%- include("../layouts/header") %>
+
+<body class="g-sidenav-show g-sidenav-pinned">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript
+    ><iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe
+  ></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <%- include("../layouts/sidebar") %>
+
+  <div class="main-content" id="panel">
+    <%- include("../layouts/topbar") %>
+
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+              <h6 class="h2 text-white d-inline-block mb-0">Sản phẩm</h6>
+              <nav
+                aria-label="breadcrumb"
+                class="d-none d-md-inline-block ml-md-4"
+              >
+                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                  <li class="breadcrumb-item">
+                    <a href="#"><i class="fas fa-home"></i></a>
+                  </li>
+                  <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Sản phẩm
+                  </li>
+                </ol>
+              </nav>
+            </div>
+            <div class="col-lg-6 col-5 text-right">
+              <a href="/admin/manageUser/createUser" class="btn btn-sm btn-neutral">Thêm mới</a>
+              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+            </div>
+          </div>
+
+     <!-- Page content -->
+  <table style="width: 100%;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  background-color: transparent;" class="align-items-center table-flush">
+    <tr>
+      <th>Mã tài khoản</th>
+      <th>Tên tài khoản</th>
+      <th>Email</th>
+      <th>Mật khẩu</th>
+      <th>Số điện thoại</th>
+      <th>Địa chỉ</th>
+      <th>Vai trò</th>
+      <th>Phương thức</th>                
+    </tr>
+
+    <% for (let i = 0; i < users.length; i++) { %>
+      <tr>
+        <td><%= users[i].id %></td>
+        <td><%= users[i].name %></td>
+        <td><%= users[i].email %></td>
+        <td><%= users[i].password %></td>
+        <td><%= users[i].phone %></td>
+        <td><%= users[i].address %></td>
+        <td><%= users[i].role %></td>
+        <td>
+          <a class="btn btn-sm btn-primary" href="/admin/manageUser/updateUser/<%= users[i].id %>">Sửa</a>
+          <a class="btn btn-sm btn-danger" href="/admin/manageUser/deleteUser/<%= users[i].id %>" onclick="return confirm('Bạn chắc chắn muốn xóa tài khoản này?')">Xóa</a>
+        </td>
+      </tr>
+    <% } %>
+      
+  </table>
+
+  </div>
+ 
+</body>
